@@ -619,7 +619,208 @@ $(function () {
                 }
             }
         });
+    //
+    // Campo PLACA
+    //
+    $('[data-mascara_validacao="placa"]')
+        .mask('ZZZNZNN', {
+            translation: {
+                'Z': { pattern: /[A-Z]/ },
+                'N': { pattern: /[0-9]/ }
+            }
+        })
+        .on('blur touchstart keyup', function () {
 
+            var $this = $(this),
+                text_label = $this.siblings('label').find('span').text();
+
+            $this.removeClass('is-valid is-invalid');
+            $this.siblings('.invalid-feedback').remove();
+
+            if ($this.val()) {
+                if ($this.attr('data-anterior') != $this.val()) {
+                    if ($this.validationLength(7)) {
+                        // Valido
+
+                        if ($this.attr('data-unico')) {
+                            $this.unico(function (json) {
+                                if (!json.length) {
+                                    // Não existe, pode seguir
+
+                                    $this
+                                        .removeClass('is-invalid')
+                                        .addClass('is-valid');
+
+                                    $this[0].setCustomValidity('');
+
+                                } else {
+                                    // Já existe, erro
+
+                                    $this
+                                        .removeClass('is-valid')
+                                        .addClass('is-invalid');
+
+                                    $this[0].setCustomValidity('invalid');
+
+                                    $this.after('<div class="invalid-feedback">Este ' + text_label.toLowerCase() + ' já está sendo usado</div>');
+                                }
+                            });
+                        } else {
+                            $this
+                                .removeClass('is-invalid')
+                                .addClass('is-valid');
+
+                            $this[0].setCustomValidity('');
+                        }
+                    } else {
+                        // Inválido
+
+                        $this
+                            .removeClass('is-valid')
+                            .addClass('is-invalid');
+
+                        $this[0].setCustomValidity('invalid');
+
+                        $this.after('<div class="invalid-feedback">Preencha o campo no formato: ABC1D23</div>');
+                    }
+                }
+            }
+        });  
+    //
+    // Campo RENAVAM
+    //
+    $('[data-mascara_validacao="renavam"]')
+        .mask('NNNNNNNNNNN', {
+            translation: {
+                'Z': { pattern: /[A-Z]/ },
+                'N': { pattern: /[0-9]/ }
+            }
+        })
+        .on('blur touchstart keyup', function () {
+
+            var $this = $(this),
+                text_label = $this.siblings('label').find('span').text();
+
+            $this.removeClass('is-valid is-invalid');
+            $this.siblings('.invalid-feedback').remove();
+
+            if ($this.val()) {
+                if ($this.attr('data-anterior') != $this.val()) {
+                    if ($this.validationLength(11)) {
+                        // Valido
+
+                        if ($this.attr('data-unico')) {
+                            $this.unico(function (json) {
+                                if (!json.length) {
+                                    // Não existe, pode seguir
+
+                                    $this
+                                        .removeClass('is-invalid')
+                                        .addClass('is-valid');
+
+                                    $this[0].setCustomValidity('');
+
+                                } else {
+                                    // Já existe, erro
+
+                                    $this
+                                        .removeClass('is-valid')
+                                        .addClass('is-invalid');
+
+                                    $this[0].setCustomValidity('invalid');
+
+                                    $this.after('<div class="invalid-feedback">Este ' + text_label.toLowerCase() + ' já está sendo usado</div>');
+                                }
+                            });
+                        } else {
+                            $this
+                                .removeClass('is-invalid')
+                                .addClass('is-valid');
+
+                            $this[0].setCustomValidity('');
+                        }
+                    } else {
+                        // Inválido
+
+                        $this
+                            .removeClass('is-valid')
+                            .addClass('is-invalid');
+
+                        $this[0].setCustomValidity('invalid');
+
+                        $this.after('<div class="invalid-feedback">Preencha o campo no formato: 00000000000</div>');
+                    }
+                }
+            }
+        }); 
+    //
+    // Campo CHASSIS
+    //
+    $('[data-mascara_validacao="chassi"]')
+        .mask('XXXXXXXXXXXXXXXXX', {
+            translation: {
+                'Z': { pattern: /[A-Z]/ },
+                'N': { pattern: /[0-9]/ },
+                'X': { pattern: /[A-Z0-9]/ }
+            }
+        })
+        .on('blur touchstart keyup', function () {
+
+            var $this = $(this),
+                text_label = $this.siblings('label').find('span').text();
+
+            $this.removeClass('is-valid is-invalid');
+            $this.siblings('.invalid-feedback').remove();
+
+            if ($this.val()) {
+                if ($this.attr('data-anterior') != $this.val()) {
+                    if ($this.validationLength(17)) {
+                        // Valido
+
+                        if ($this.attr('data-unico')) {
+                            $this.unico(function (json) {
+                                if (!json.length) {
+                                    // Não existe, pode seguir
+
+                                    $this
+                                        .removeClass('is-invalid')
+                                        .addClass('is-valid');
+
+                                    $this[0].setCustomValidity('');
+
+                                } else {
+                                    // Já existe, erro
+
+                                    $this
+                                        .removeClass('is-valid')
+                                        .addClass('is-invalid');
+
+                                    $this[0].setCustomValidity('invalid');
+
+                                    $this.after('<div class="invalid-feedback">Este ' + text_label.toLowerCase() + ' já está sendo usado</div>');
+                                }
+                            });
+                        } else {
+                            $this
+                                .removeClass('is-invalid')
+                                .addClass('is-valid');
+
+                            $this[0].setCustomValidity('');
+                        }
+                    } else {
+                        // Inválido
+
+                        $this
+                            .removeClass('is-valid')
+                            .addClass('is-invalid');
+
+                        $this[0].setCustomValidity('invalid');
+
+                        $this.after('<div class="invalid-feedback">Preencha o campo no formato: XXXXXXXXXXXXXXXXX</div>');
+                    }
+                }
+            }
+        });            
     //
     // Campo Email
     //

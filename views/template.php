@@ -13,61 +13,63 @@
          "link" => "/#",
          "filhos" => [
             [
-               "text" => "Clientes",
-               "icon" => "fas fa-handshake",
-               "permissao" => "clientes_ver",
-               "link" => "/clientes"
+               "text" => "Veículos",
+               "icon" => "fas fa-car",
+               "permissao" => "veiculos_ver",
+               "link" => "/veiculos"
             ],
             [
-               "text" => "Fornecedores",
+               "text" => "Condutores",
                "icon" => "fas fa-users",
-               "permissao" => "fornecedores_ver",
-               "link" => "/fornecedores"
+               "permissao" => "condutores_ver",
+               "link" => "/condutores"
             ],
             [
-               "text" => "Funcionários",
-               "icon" => "fas fa-users",
-               "permissao" => "funcionarios_ver",
-               "link" => "/funcionarios"
+               "text" => "Ferramentas",
+               "icon" => "fas fa-tools",
+               "permissao" => "ferramentas_ver",
+               "link" => "/ferramentas"
             ],
             [
-               "text" => "Serviços",
-               "icon" => "fas fa-users",
+               "text" => "Itens CheckList Carros",
+               "icon" => "fas fa-check-square",
                "permissao" => "servicos_ver",
                "link" => "/servicos"
-            ],
-            [
-               "text" => "Produtos",
-               "icon" => "fas fa-boxes",
-               "permissao" => "produtos_ver",
-               "link" => "/produtos"
             ]
+            // ,
+            // [
+            //    "text" => "Produtos",
+            //    "icon" => "fas fa-boxes",
+            //    "permissao" => "produtos_ver",
+            //    "link" => "/produtos"
+            // ]
          ]
       ],
-      [
-         "text" => "Financeiro",
-         "icon" => "fas fa-money-bill-alt",
-         "permissao" => "%",
-         "link" => "/#",
-         "filhos" => [
-            [
-               "text" => "Administradoras de Cartão",
-               "icon" => "fas fa-credit-card",
-               "permissao" => "administradoras_ver",
-               "link" => "/administradoras"
-            ],
-            [
-               "text" => "Lançamentos de Caixa",
-               "icon" => "fas fa-cart-plus",
-               "permissao" => "fluxocaixa_add",
-               "link" => "/fluxocaixa/adicionar"
-            ],
-            [
-               "text" => "Controle de Caixa",
-               "icon" => "fas fa-calculator",
-               "permissao" => "fluxocaixa_ver",
-               "link" => "/fluxocaixa"
-            ]
+      // ,
+      // [
+      //    "text" => "Financeiro",
+      //    "icon" => "fas fa-money-bill-alt",
+      //    "permissao" => "%",
+      //    "link" => "/#",
+      //    "filhos" => [
+      //       [
+      //          "text" => "Administradoras de Cartão",
+      //          "icon" => "fas fa-credit-card",
+      //          "permissao" => "administradoras_ver",
+      //          "link" => "/administradoras"
+      //       ],
+      //       [
+      //          "text" => "Lançamentos de Caixa",
+      //          "icon" => "fas fa-cart-plus",
+      //          "permissao" => "fluxocaixa_add",
+      //          "link" => "/fluxocaixa/adicionar"
+      //       ],
+      //       [
+      //          "text" => "Controle de Caixa",
+      //          "icon" => "fas fa-calculator",
+      //          "permissao" => "fluxocaixa_ver",
+      //          "link" => "/fluxocaixa"
+      //       ]
             // ,
       //       [
       //          "text" => "Controle de Saldos",
@@ -75,8 +77,8 @@
       //          "permissao" => "controlesaldos_ver",
       //          "link" => "/controlesaldos"
       //       ]
-         ]
-      ],
+         // ]
+      // ],
       // [
       //    "text" => "Relatórios",
       //    "icon" => "fas fa-table",
@@ -287,9 +289,9 @@
             </div>
          </main>
       </div>
-      <footer class="py-3 bg-white mt-auto shadow-sm">
+      <footer class="py-3 mt-auto shadow-sm">
          <div class="container-fluid">
-            <div class="text-muted text-center small">Todos os direitos reservados <strong>Leme</strong><br/>Estamos à disposição: <a href="mailto:contato@useleme.com.br" tabindex="-1" class="text-muted font-italic">contato@useleme.com.br</a></div>
+            <div class="text-center small">Todos os direitos reservados <strong>Leme</strong><br/>Estamos à disposição: <a id="contatoLeme" href="mailto:contato@useleme.com.br" tabindex="-1" class="font-italic">contato@useleme.com.br</a></div>
          </div>
       </footer>
    </body> 

@@ -1,15 +1,15 @@
 /* Menu Horizontal */
 #nav, #divSair  {
-    background-color: #000 !important;
-    color: yellow !important;
+    background-color: #02da55 !important;
+    color: #c511bc !important;
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after, .hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner::after {
-    background-color: yellow !important;
+    background-color: #c511bc  !important;
 }
 
 .navbar-brand , #navbarDropdown, #divSair > a{
-    color: yellow !important;
+    color: #c511bc  !important;
 }
 
 .navbar-brand:hover, #navbarDropdown:hover{
@@ -17,28 +17,37 @@
 }
 #divSair > a:hover{
     color: #FFF !important;
-    background-color: #000;
+    background-color: #02da55;
 }
 
 /* menu Horizontal */
 
 #sidebar-wrapper {
-    background-color: #000 !important;
+    background-color: #02da55 !important;
 }
 
 #sidebar-wrapper >ul>li.nav-item a.nav-link{
-    color: yellow !important;
+    color: #c511bc  !important;
 }
 
 #sidebar-wrapper >ul>li.nav-item:hover{
-    background-color: #635e5e;
+    background-color: #118d1b;
 }
 
 #sidebar-wrapper >ul>li>ul> li.nav-item a.nav-link {
-    background-color: #000;
-    color: yellow !important;
+    background-color: #02da55;
+    color: #c511bc  !important;
 }
 
 #sidebar-wrapper >ul>li>ul> li.nav-item a.nav-link:hover{
-    background-color: #635e5e;
+    background-color: #118d1b;
+}
+
+/* Rodapé */
+footer {
+    background-color: #02da55 !important;
+    color: #c511bc  !important;
+}
+footer > div.text-muted , #contatoLeme {
+    color: #c511bc  !important;
 }

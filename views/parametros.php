@@ -156,11 +156,8 @@
             ?>
             
             <?php if (isset($comment)): ?>
-                <?php //echo '<br><br>'; print_r($comment); echo '<br><br>'; ?>  
-                <?php //array_key_exists("info_relacao", $comment) ? print_r($comment) : ''; ?>
 
                 <?php if ( array_key_exists("parametro", $comment) && array_key_exists("parametro_campo", $comment) && array_key_exists("info_relacao", $comment) ): ?>
-                    <?php// print_r($comment) ?>
                     <?php
                         //
                         // Parametros com um input dependentes de outra tabela

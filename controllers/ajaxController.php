@@ -819,6 +819,53 @@ class ajaxController extends controller{
     echo json_encode($dados);
   }
 
+  
+  public function nomeFerramentas(){
+    $dados = array();
+    if(isset($_POST) && !empty($_POST)){
+      
+      $termo = trim(addslashes($_POST['term']));
+      $cnd = new Condutores();
+      $dados = $cnd->nomeFerramentas($termo);
+      
+    }
+    echo json_encode($dados);
+  }
+
+  public function buscaConsumiveis(){
+    $dados = array();
+    if(isset($_POST) && !empty($_POST)){
+      // print_r($_POST); exit;
+      $vc = new Veiculos();
+      $dados = $vc->buscaConsumiveis($_POST);
+    }
+    echo json_encode($dados);
+  }
+
+  public function buscaCategorias(){
+    $dados = array();
+    if(isset($_POST) && !empty($_POST)){
+      
+      $termo = trim(addslashes($_POST['term']));
+      $vc = new Veiculos();
+      $dados = $vc->buscaCategorias($termo);
+      
+    }
+    // print_r($dados); exit;
+    echo json_encode($dados);
+  }
+  public function buscaCategoriasConsumiveis(){
+    $dados = array();
+    if(isset($_POST) && !empty($_POST)){
+      
+      $vc = new Veiculos();
+      $dados = $vc->buscaCategoriasConsumiveis();
+      
+    }
+    // print_r($dados); exit;
+    echo json_encode($dados);
+  }
+  
   public function nomeClientes(){
     $dados = array();
     if(isset($_POST) && !empty($_POST)){
